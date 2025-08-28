@@ -3,7 +3,8 @@ date
 echo "Host is " `hostname`
 pushd ~/FIREX-AQ
 
-source ../loadPython
+# source ../loadPython
+ssh derecho.hpc.ucar.edu 'bash -lc ../loadPython'
 python3 firex-plot.py year=today species=isopr,O3_SFC,PM2_5_DRY_SFC,co_fire,nh3,co_anth,c2h6,PM2_5_DRY source=aq-watch domain=d01 height=-1.0		# real
 #python3 firex-plot.py year=2025 month=5 day=13 species=isopr,O3_SFC,PM2_5_DRY_SFC,co_fire,nh3,co_anth,c2h6,PM2_5_DRY source=aq-watch domain=d01 height=-1.0
 #python3 firex-plot.py year=2025 month=5 day=14 species=isopr,O3_SFC,PM2_5_DRY_SFC,co_fire,nh3,co_anth,c2h6,PM2_5_DRY source=aq-watch domain=d01 height=-1.0
